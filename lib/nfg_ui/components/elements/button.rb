@@ -24,13 +24,11 @@ module NfgUi
         private
 
         def disable_with_text
-          disable_with.present? ? disable_with : view_context.ui.nfg(:icon,
-                                                                     'spinner spin fw',
-                                                                     text: 'Saving...')
+          @disable_with_text ||= disable_with
         end
 
         def update_data_attributes
-          updated_data = disable_with ? { disable_with: disable_with } : {}
+          updated_data = disable_with_text.present? ? { disable_with: disable_with_text } : {}
           updated_data[:remote] = remote if remote
 
           data.merge!(updated_data)
