@@ -50,9 +50,8 @@ module NfgUi
 
         def submit_trait
           @as = :button
+          options[:type] = :submit
           options.delete(:href)
-          assistive_html_attributes.merge!(type: :submit)
-          @default_html_wrapper_element = :button
         end
 
         def outlined_trait
