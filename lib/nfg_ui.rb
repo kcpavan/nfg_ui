@@ -42,6 +42,8 @@ module NfgUi
                                   jumbotron
                                   list_group
                                   list_group_item
+                                  media
+                                  media_body
                                   media_object
                                   modal
                                   nav
@@ -76,6 +78,7 @@ module NfgUi
                                   key
                                   list_group_item
                                   loader
+                                  media_body
                                   media_object
                                   nav
                                   popover
@@ -97,7 +100,7 @@ module NfgUi
                                   graph
                                   jumbotron
                                   list_group
-                                  media_group
+                                  media
                                   modal
                                   navbar
                                   page_header
