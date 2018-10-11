@@ -17,6 +17,8 @@ module NfgUi
   require_relative 'nfg_ui/bootstrap'
   require_relative 'nfg_ui/components'
 
+  DEFAULT_BOOTSTRAP_THEME    = :primary
+
   BOOTSTRAP_THEMES           = %i[primary
                                   secondary
                                   success
@@ -36,6 +38,11 @@ module NfgUi
                                   card
                                   carousel
                                   dropdown
+                                  dropdown_divider
+                                  dropdown_header
+                                  dropdown_item
+                                  dropdown_menu
+                                  dropdown_toggle
                                   embed
                                   form
                                   input_group
@@ -71,7 +78,10 @@ module NfgUi
                                   breadcrumb_item
                                   button
                                   chart
-                                  dropdown
+                                  dropdown_divider
+                                  dropdown_header
+                                  dropdown_item
+                                  dropdown_toggle
                                   embed
                                   form_control
                                   input_group
@@ -94,6 +104,8 @@ module NfgUi
                                   card
                                   carousel
                                   collapse
+                                  dropdown
+                                  dropdown_menu
                                   empty_state
                                   filter_bar
                                   form_group

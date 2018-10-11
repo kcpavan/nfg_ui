@@ -57,7 +57,7 @@ module NfgUi
             id: ('' if id.present?),
 
             # Content
-            heading: ('' if heading.present?),
+            # heading: ('' if heading.present?),
             body: ('' if body.present?),
             data: {},
 

@@ -1,0 +1,87 @@
+%h1 Dropdowns
+
+%h3 Default
+= ui.nfg :dropdown, id: 'test_id1', class: 'my-4' do
+  = ui.nfg :dropdown_toggle, body: 'Secondary Manual Toggle as Link', theme: :secondary, as: :a
+  = ui.nfg :dropdown_menu do
+    = ui.nfg :dropdown_header, heading: 'Dropdown Header'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1 Disabled', disabled: true, href: '#'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2 Tooltipped', tooltip: 'Tested tooltip', href: '#'
+    = ui.nfg :dropdown_divider
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3 Disabled with Tooltip', disabled: true, tooltip: 'Test tooltip', class: 'test-class', id: 'test_id', data: { test_data: 'response' }, href: '#test'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4 - No href'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 5 - Active', active: true, href: '#'
+
+%hr
+
+%h3 Auto dropdown button
+= ui.nfg :dropdown, button: 'Auto Dropdown' do
+  = ui.nfg :dropdown_menu do
+    = ui.nfg :dropdown_header, heading: 'Dropdown Header'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4'
+
+%h4.mt-4 Thematic auto button
+= ui.nfg :dropdown, button: 'Auto Dropdown with Theme', theme: :warning do
+  = ui.nfg :dropdown_menu do
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4'
+
+%hr
+
+%h3 Disabled Dropdown 
+%p Disabled dropdown toggles can have tooltips
+= ui.nfg :dropdown, class: 'my-4' do
+  = ui.nfg :dropdown_toggle, body: 'Disabled Dropdown Toggle', theme: :secondary, as: :a, disabled: true, tooltip: 'Disabled', id: 'tester'
+  = ui.nfg :dropdown_menu do
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4'
+
+%hr
+
+%h3 Dropdown menu locations
+%h4.mt-4 Right aligned menu
+= ui.nfg :dropdown, button: 'Right Aligned Menu' do
+  = ui.nfg :dropdown_menu, right: true do
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4'
+
+%h4.mt-4 Left Aligned Menu
+%p 
+  %i Left aligned by default
+= ui.nfg :dropdown, button: 'Left Aligned Menu' do
+  = ui.nfg :dropdown_menu do
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4'
+
+%h4.mt-4 Offset Menu
+%p Use coordinates per BS documentation; supply to the dropdown toggle component
+= ui.nfg :dropdown do
+  = ui.nfg :dropdown_toggle, body: 'Manual Offset Dropdown Toggle', offset: '10,20'
+  = ui.nfg :dropdown_menu do
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4'
+
+.mb-4
+
+= ui.nfg :dropdown, button: 'Auto Button with Offset', offset: '10,20' do
+  = ui.nfg :dropdown_menu do
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 1'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 2'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 3'
+    = ui.nfg :dropdown_item, body: 'Dropdown Item 4'
+
+.mb-5.pb-5
+.mb-5.pb-5
