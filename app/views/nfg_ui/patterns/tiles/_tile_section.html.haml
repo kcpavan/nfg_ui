@@ -1,4 +1,6 @@
 %div{ tile_section.html_options }
   - if tile_section.heading
-    = ui.nfg :typeface, heading: tile_section.heading, icon: tile_section.icon
+    %h4
+      = tile_section.heading
+      = ui.nfg :icon, tile_section.icon, class: 'ml-1'
   = tile_section.body
